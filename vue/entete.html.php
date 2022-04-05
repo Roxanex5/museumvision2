@@ -12,35 +12,33 @@
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     </head>
     <body>
-    <nav>
-            
-            <ul id="menuGeneral">
-                <li><a href="./?action=accueil">Accueil</a></li> 
-                <li><a href="./?action=recherche"><img src="images/rechercher.png" alt="loupe" />Recherche</a></li>
-                <li></li> 
-                <li id="logo"><a href="./?action=accueil"><img src="images/logoBarre.png" alt="logo" /></a></li>
-                <li></li> 
-                <li><a href="./?action=cgu">CGU</a></li>
-                <li><a href="./?action=connexion"><img src="images/profil.png" alt="loupe" />Connexion</a></li>
-            </ul>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nouvelle entrée</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jauges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Concernant les visites</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <div id="bouton">
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <ul id="menuContextuel">
-        <li><img src="images/logoBarre.png" alt="logo" /></li>
-        <?php if (isset($menuBurger)) { ?>
-            <?php for ($i = 0; $i < count($menuBurger); $i++) { ?>
-                <li>
-                    <a href="<?php echo $menuBurger[$i]['url']; ?>">
-                        <?php echo $menuBurger[$i]['label']; ?>
-                    </a>
-                </li>
-            <?php } ?>
-        <?php } ?>
-    </ul>
+
 
 
     <div id="corps">

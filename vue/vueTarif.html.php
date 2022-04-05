@@ -34,27 +34,7 @@
 
 
 </head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nouvelle entrée</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Jauges</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Concernant les visites</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+<h1 class="text-center" > Création d'une visite</h1>
 <div class="row mb-3 m-3">
     <div class="col-2">
         <img src="../images/date.png" class="rounded" alt="date" style="width:20%; height:auto">
@@ -67,13 +47,13 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputEmail3" class="col-2 col-form-label">Nombre total de personnes : </label>
+            <label for="inputEmail3" class="col-2 col-form-label">Nombre total d'adultes: </label>
             <div class="col-1">
                 <input type="email" class="form-control" id="inputEmail3">
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputEmail3" class="col-2 col-form-label">Nombre total de personnes : </label>
+            <label for="inputEmail3" class="col-2 col-form-label">Nombre total d'enfants : </label>
             <div class="col-1">
                 <input type="email" class="form-control" id="inputEmail3">
             </div>
@@ -92,38 +72,21 @@
             </label>
         </div>
     </div>
-    <div class="row mb-3 m-5">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Le 14éme siécle
-            </label>
+        <?php
+        $i=0;
+        $max = count( $listeExpos );
+       while( $i < $max )  { ?>
+        <div class="row mb-3 m-5">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    <?php echo $listeExpos[$i]['nom']  ?>
+                </label>
+            </div>
         </div>
-    </div>
-    <div class="row mb-3 m-5">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Le 20émé siécle
-            </label>
-        </div>
-    </div>
-    <div class="row mb-3 m-5">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Le 18émé siécle
-            </label>
-        </div>
-    </div>
-    <div class="row mb-3 m-5">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Le 12émé siécle
-            </label>
-        </div>
-    </div>
+        <?php $i++ ;
+        } ?>
+
 
     <div  class="row mb-3 m-3">
         <div class="col-3">

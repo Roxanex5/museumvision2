@@ -1,9 +1,9 @@
 <?php
 
 function connexionPDO() {
-    $login = "museum-vision";
+    $login = "museum_vision";
     $mdp = "2003Rc1001";
-    $bd = "museum-vision";
+    $bd = "museum_vision";
     $serveur = "localhost";
 
     try {
